@@ -14,26 +14,38 @@ from turtle import pen
 class Stationery:
     def __init__(self, title):
         self.title = title
+
     def draw(self):
         return f"{self.title}"
+
+
 class Pen(Stationery):
     def __init__(self, title):
         super().__init__(title)
+
     def draw(self):
-        return f"{self.title} Запуск отрисовки ручкой"   
+        return f"{self.title} Запуск отрисовки ручкой"
+
+
 class Pensil(Stationery):
     def __init__(self, title):
         super().__init__(title)
+
     def draw(self):
-        return f"{self.title} Запуск отрисовки карандашом"  
+        return f"{self.title} Запуск отрисовки карандашом"
+
+
 class Handle(Stationery):
     def __init__(self, title):
         super().__init__(title)
+
     def draw(self):
-        return f"{self.title} Запуск отрисовки маркером"    
-a = Pen("Ручка: ")     
+        return f"{self.title} Запуск отрисовки маркером"
+
+
+a = Pen("Ручка: ")
 b = Pensil("Карандаш: ")
-c = Handle ("Маркер: ") 
+c = Handle("Маркер: ")
 print(a.draw())
 print(b.draw())
 print(c.draw())
